@@ -822,7 +822,15 @@ nav ul {
   color: #007bff;
   outline: none;
 }
+.read-more-link {
+  color: #ff6b00;
+  text-decoration: none;
+  font-weight: bold;
+}
 
+.read-more-link:hover {
+  text-decoration: underline;
+}
 /* Responsive: stack main menu vertically on small screens */
 @media (max-width: 768px) {
   nav ul {

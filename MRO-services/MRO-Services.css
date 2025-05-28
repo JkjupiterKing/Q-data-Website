@@ -140,66 +140,6 @@ nav ul li a:hover {
   color: #555;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-}
-
-.service-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  padding: 30px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.service-icon {
-  width: 60px;
-  height: 60px;
-  background-color: #e6f0ff;
-  color: #0056b3;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #0056b3;
-}
-
-.service-card p {
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.service-link {
-  color: #ff6b00;
-  font-weight: 500;
-  position: relative;
-  display: inline-block;
-}
-
-.service-link:after {
-  content: "→";
-  margin-left: 5px;
-  transition: margin-left 0.3s;
-}
-
-.service-link:hover:after {
-  margin-left: 10px;
-}
-
 /* Footer */
 footer {
   background-color: #0a2744;
@@ -477,6 +417,41 @@ nav ul {
 
 .read-more-link:hover {
   text-decoration: underline;
+}
+.accordion-header {
+  width: 100%;
+  padding: 1em;
+  font-size: 1.1rem;
+  text-align: left;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover {
+  background-color: gray;
+}
+
+.accordion-header .icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-body {
+  padding: 16px 24px;
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.accordion-header.active .icon {
+  transform: rotate(45deg);
+  /* + turns to × visually, or rotate(90deg) if using >/v */
 }
 
 /* Responsive: stack main menu vertically on small screens */
