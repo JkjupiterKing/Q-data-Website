@@ -546,7 +546,11 @@ nav ul {
   color: #007bff;
   outline: none;
 }
-
+img {
+  display: block;
+  width: 40em;
+  margin: 0 auto;
+}
 /* Responsive: stack main menu vertically on small screens */
 @media (max-width: 768px) {
   nav ul {

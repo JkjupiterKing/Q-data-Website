@@ -199,6 +199,11 @@ nav ul li a:hover {
 .service-link:hover:after {
   margin-left: 10px;
 }
+img {
+  display: block;
+  width: 40em;
+  margin: 0 auto;
+}
 
 /* Footer */
 footer {

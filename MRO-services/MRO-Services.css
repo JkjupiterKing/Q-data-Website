@@ -221,7 +221,11 @@ nav ul li a:hover {
   margin: 0 auto;
   color: #555;
 }
-
+img {
+  display: block;
+  width: 40em;
+  margin: 0 auto;
+}
 /* Footer */
 footer {
   background-color: #0a2744;

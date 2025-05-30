@@ -831,6 +831,11 @@ nav ul {
 .read-more-link:hover {
   text-decoration: underline;
 }
+img {
+  display: block;
+  width: 40em;
+  margin: 0 auto;
+}
 /* Responsive: stack main menu vertically on small screens */
 @media (max-width: 768px) {
   nav ul {

@@ -10,7 +10,11 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-
+img {
+  display: block;
+  width: 40em;
+  margin: 0 auto;
+}
 a {
   text-decoration: none;
   color: inherit;
