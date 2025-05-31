@@ -23,28 +23,24 @@ document.addEventListener("click", function (e) {
     if (!d.contains(e.target)) d.classList.remove("open");
   });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
-  const readMoreLinks = document.querySelectorAll(".read-more");
+  const headers = document.querySelectorAll(".accordion-header");
 
-  readMoreLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const card = this.closest(".service-card");
+  headers.forEach((header) => {
+    header.addEventListener("click", function () {
+      const active = this.classList.contains("active");
 
-      // Collapse all others
-      document.querySelectorAll(".service-card").forEach((c) => {
-        if (c !== card) {
-          c.classList.remove("expanded");
-          c.querySelector(".read-more").innerText = "Read more";
-        }
+      // Close all
+      headers.forEach((h) => {
+        h.classList.remove("active");
+        h.nextElementSibling.style.display = "none";
       });
 
-      // Toggle the clicked one
-      card.classList.toggle("expanded");
-      this.innerText = card.classList.contains("expanded")
-        ? "Read less"
-        : "Read more";
+      // Toggle current
+      if (!active) {
+        this.classList.add("active");
+        this.nextElementSibling.style.display = "block";
+      }
     });
   });
 });

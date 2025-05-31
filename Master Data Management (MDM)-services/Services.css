@@ -309,17 +309,6 @@ footer {
   .hero h1 {
     font-size: 40px;
   }
-
-  .why-us-container,
-  .solution-content {
-    flex-direction: column;
-  }
-
-  .why-us-image,
-  .solution-image {
-    order: -1;
-    margin-bottom: 30px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -483,7 +472,28 @@ nav ul {
 .read-more-link:hover {
   text-decoration: underline;
 }
+.service-card .content {
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
 
+.service-card.expanded .content {
+  max-height: 2000px;
+}
+
+.read-more {
+  display: block;
+  margin-top: 10px;
+  color: #ff6b00;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
 /* Responsive: stack main menu vertically on small screens */
 @media (max-width: 768px) {
   nav ul {

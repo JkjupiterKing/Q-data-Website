@@ -223,7 +223,9 @@ nav ul li a:hover {
   margin-left: 10px;
 }
 img {
+  display: block;
   width: 40em;
+  margin: 0 auto;
 }
 /* Footer */
 footer {

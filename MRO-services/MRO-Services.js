@@ -43,4 +43,27 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  const readMoreLinks = document.querySelectorAll(".read-more");
+
+  readMoreLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const card = this.closest(".service-card");
+
+      // Collapse all others
+      document.querySelectorAll(".service-card").forEach((c) => {
+        if (c !== card) {
+          c.classList.remove("expanded");
+          c.querySelector(".read-more").innerText = "Read more";
+        }
+      });
+
+      // Toggle the clicked one
+      card.classList.toggle("expanded");
+      this.innerText = card.classList.contains("expanded")
+        ? "Read less"
+        : "Read more";
+    });
+  });
 });
