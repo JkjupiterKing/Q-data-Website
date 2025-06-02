@@ -6,7 +6,7 @@ menuToggle.addEventListener("click", () => {
   navUl.classList.toggle("active");
 });
 
-// Dropdown menu toggle on button click
+// Dropdown menu
 document.querySelectorAll(".dropdown-btn").forEach((btn) => {
   btn.addEventListener("click", function (e) {
     e.preventDefault();
@@ -18,24 +18,8 @@ document.querySelectorAll(".dropdown-btn").forEach((btn) => {
     btn.setAttribute("aria-expanded", parent.classList.contains("open"));
   });
 });
-
-// Close dropdowns when clicking outside
 document.addEventListener("click", function (e) {
   document.querySelectorAll(".dropdown").forEach((d) => {
     if (!d.contains(e.target)) d.classList.remove("open");
   });
 });
-
-const slides = document.querySelectorAll(".carousel-slide");
-let currentSlide = 0;
-
-function showNextSlide() {
-  slides[currentSlide].classList.remove("active");
-
-  currentSlide = (currentSlide + 1) % slides.length;
-
-  slides[currentSlide].classList.add("active");
-}
-
-// Change slide every 5 seconds
-setInterval(showNextSlide, 5000);
