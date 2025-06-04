@@ -665,4 +665,16 @@ nav ul {
     display: flex;
     flex-direction: column;
   }
+
+
+/* Logo CSS starts from here */
+.logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+
+}
+
 }
