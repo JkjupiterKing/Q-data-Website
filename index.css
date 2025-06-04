@@ -32,10 +32,12 @@ h6 {
   margin: 0 auto;
   padding: 0 20px;
 }
-
+#logo {
+  width: 10em;
+}
 /* Header Styles */
 header {
-  background-color: #fff;
+  background-color: #0a2744;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -72,7 +74,7 @@ nav ul li a {
   font-weight: 500;
   transition: color 0.3s;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 nav ul li a:hover {
@@ -197,6 +199,7 @@ footer {
 .footer-links li a {
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s;
+  text-decoration: none;
 }
 
 .footer-links li a:hover {
@@ -212,6 +215,7 @@ footer {
   display: flex;
   gap: 15px;
   margin-top: 20px;
+  text-decoration: none;
 }
 
 .social-icon {
@@ -276,7 +280,7 @@ img {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: black;
     padding: 20px 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
@@ -375,6 +379,7 @@ img {
 
   nav ul li {
     margin: 10px 20px;
+    color: black;
   }
 
   /* Dropdown content expands in place */
@@ -416,7 +421,7 @@ nav ul {
   cursor: pointer;
   font-size: 16px;
   padding: 8px 12px;
-  color: #333;
+  color: white;
   font-weight: 600;
 }
 
@@ -489,7 +494,7 @@ nav ul {
   cursor: pointer;
   font-size: 16px;
   padding: 8px 12px;
-  color: #333;
+  color: white;
   font-weight: 600;
 }
 
@@ -632,7 +637,7 @@ nav ul {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: #0a2744;
     padding: 20px 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
@@ -641,7 +646,17 @@ nav ul {
   nav ul.active {
     display: flex;
   }
+  nav ul li a {
+    color: white; /* ✅ Mobile nav link color */
+  }
 
+  .dropdown-btn {
+    color: white; /* ✅ Dropdown button color on mobile */
+  }
+
+  .dropdown-content a {
+    color: black; /* ✅ Dropdown items color on mobile */
+  }
   .menu-toggle {
     display: flex; /* Show on mobile */
   }
@@ -666,15 +681,10 @@ nav ul {
     flex-direction: column;
   }
 
-
-/* Logo CSS starts from here */
-.logo img {
-  width: 150px;
-  height: auto;
-  display: block;
-}
-
-
-}
-
+  /* Logo CSS starts from here */
+  .logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+  }
 }
