@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Load navbar then attach events
-  $("#mySidenav").load("./Navbar/Navbar.html", function () {
+  $("#mySidenav").load("../Navbar/Navbar.html", function () {
     // ✅ Attach toggle functionality after navbar loads
     const menuToggle = document.querySelector(".menu-toggle");
     const navUl = document.querySelector("nav ul");
