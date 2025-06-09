@@ -544,6 +544,7 @@ nav ul {
 .hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  margin-left: 1em;
 }
 
 .hero p {

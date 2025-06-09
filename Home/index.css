@@ -923,3 +923,22 @@ nav ul {
     transform: translateY(0);
   }
 }
+#get-in-touch .form-control {
+  border-radius: 0.375rem;
+}
+
+#get-in-touch textarea {
+  resize: none;
+}
+#get-in-touch .section-header h2 {
+  color: #0056b3;
+}
+
+#get-in-touch .section-header .text-muted {
+  color: #555 !important;
+}
+#submit {
+  background-color: #ff6b00;
+  border-color: #e05e00;
+  color: white;
+}

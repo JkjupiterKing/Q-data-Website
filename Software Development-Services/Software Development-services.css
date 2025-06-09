@@ -561,8 +561,8 @@ nav ul {
   border-radius: 3px;
 }
 .hero {
-  background-color: #9fb3df;
-  color: black;
+  background: linear-gradient(135deg, #0056b3, #00377a 100%);
+  color: white;
   padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
@@ -584,6 +584,7 @@ nav ul {
 .hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  margin-left: 1em;
 }
 
 .hero p {
