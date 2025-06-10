@@ -31,4 +31,5 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!d.contains(e.target)) d.classList.remove("open");
     });
   });
+  $("#footer").load("../Footer/footer.html");
 });

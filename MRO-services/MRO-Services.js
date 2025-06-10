@@ -76,4 +76,5 @@ document.addEventListener("DOMContentLoaded", function () {
         : "Read more";
     });
   });
+  $("#footer").load("../Footer/footer.html");
 });

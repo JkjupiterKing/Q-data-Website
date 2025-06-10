@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!d.contains(e.target)) d.classList.remove("open");
     });
   });
+  $("#footer").load("../Footer/footer.html");
 });
 
 // ✅ Close dropdowns when clicking outside (can run globally)

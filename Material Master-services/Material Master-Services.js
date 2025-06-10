@@ -51,4 +51,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  $("#footer").load("../Footer/footer.html");
 });
