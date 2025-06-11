@@ -147,8 +147,8 @@ footer {
 .footer-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  margin-bottom: 50px;
+  gap: 20px;
+  margin-bottom: 3em;
 }
 
 .footer-col h3 {
@@ -168,49 +168,9 @@ footer {
   background-color: #ff6b00;
 }
 
-.footer-links {
-  list-style: none;
-}
-
-.footer-links li {
-  margin-bottom: 12px;
-}
-
-.footer-links li a {
-  color: rgba(255, 255, 255, 0.8);
-  transition: color 0.3s;
-  text-decoration: none;
-}
-
-.footer-links li a:hover {
-  color: #ff6b00;
-}
-
 .footer-contact p {
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.8);
-}
-
-.social-links {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-  text-decoration: none;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
-}
-
-.social-icon:hover {
-  background-color: #ff6b00;
 }
 
 .copyright {
