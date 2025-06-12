@@ -98,7 +98,9 @@ nav ul li a:hover {
 #home-1 {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
-
+.carousel {
+  margin-top: 2.3em; /* Adjust this value to match the height of the sidenav */
+}
 /* ✅ Responsive adjustments */
 @media (max-width: 768px) {
   .hero-carousel {
@@ -872,4 +874,24 @@ nav ul {
   background-color: #ff6b00;
   border-color: #e05e00;
   color: white;
+}
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .sidenav {
+    height: 50px;
+    padding: 0 10px;
+  }
+
+  .sidenav a {
+    padding: 0 10px;
+    font-size: 14px;
+  }
 }

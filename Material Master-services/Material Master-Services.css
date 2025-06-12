@@ -507,6 +507,7 @@ nav ul {
   padding: 3em;
   position: relative;
   overflow: hidden;
+  margin-top: 4em;
 }
 
 .hero-content {
@@ -695,4 +696,24 @@ nav ul {
 /* Optional: add spacing between sections */
 .main-list > li + li {
   margin-top: 20px;
+}
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .sidenav {
+    height: 50px;
+    padding: 0 10px;
+  }
+
+  .sidenav a {
+    padding: 0 10px;
+    font-size: 14px;
+  }
 }

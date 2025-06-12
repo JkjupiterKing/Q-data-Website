@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // ✅ Attach dropdown toggle
+    // Attach dropdown toggle
     document.querySelectorAll(".dropdown-btn").forEach((btn) => {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ✅ Close dropdowns when clicking outside (can run globally)
+  // Close dropdowns when clicking outside
   document.addEventListener("click", function (e) {
     document.querySelectorAll(".dropdown").forEach((d) => {
       if (!d.contains(e.target)) d.classList.remove("open");

@@ -1,22 +1,31 @@
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: sticky;
-}
-#logo {
-  width: 10em;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: #0056b3;
+body {
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-.logo span {
-  color: #ff6b00;
+header {
+  background-color: #0a2744;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fixed position */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px; /* Adjusted padding */
 }
 
 nav ul {
@@ -26,31 +35,58 @@ nav ul {
 
 nav ul li {
   margin-left: 30px;
+  position: relative; /* For dropdown positioning */
 }
 
 nav ul li a {
   font-weight: 500;
   transition: color 0.3s;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 nav ul li a:hover {
   color: #ff6b00;
 }
 
-.contact-btn {
-  background-color: #ff6b00;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: 500;
-  transition: background-color 0.3s;
-  text-decoration: none;
+.dropdown {
+  position: relative; /* Position relative for dropdown */
 }
 
-.contact-btn:hover {
-  background-color: #e05e00;
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position it below the button */
+  top: 100%; /* Align below the button */
+  left: 0;
+  background-color: #0a2744; /* Same background as header */
+  min-width: 200px; /* Minimum width */
+  z-index: 1000; /* Ensure it appears above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+  color: white; /* Link color */
+  padding: 10px 15px; /* Padding for links */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Block display for links */
+}
+
+.dropdown-content a:hover {
+  background-color: #0056b3; /* Change background on hover */
+}
+
+/* Show dropdown content when the dropdown is open */
+.dropdown.open .dropdown-content {
+  display: block; /* Show the dropdown content */
 }
 
 /* Mobile Navigation */
@@ -62,9 +98,7 @@ nav ul li a:hover {
   height: 21px;
   cursor: pointer;
 }
-img {
-  width: 35em;
-}
+
 .menu-toggle span {
   display: block;
   height: 3px;
@@ -73,69 +107,7 @@ img {
   border-radius: 3px;
 }
 
-@media (max-width: 768px) {
-  /* Show hamburger menu */
-  .menu-toggle {
-    display: flex;
-  }
-
-  /* Hide nav links by default on mobile */
-  nav ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    padding: 20px 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-  }
-
-  /* Show menu when active */
-  nav ul.active {
-    display: flex;
-  }
-
-  /* Adjust nav items for mobile */
-  nav ul li {
-    margin: 10px 20px;
-  }
-
-  /* Make dropdowns full width and position relative */
-  .dropdown-content {
-    position: relative;
-    top: unset;
-    left: unset;
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    max-height: none;
-  }
-
-  .dropdown:hover .dropdown-content,
-  .dropdown.open .dropdown-content {
-    display: flex;
-  }
-}
-/* Hamburger icon hidden by default */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-}
-.menu-toggle span {
-  display: block;
-  height: 3px;
-  background-color: #0056b3;
-  border-radius: 3px;
-}
-
-/* NAV MENU (MOBILE) */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   nav ul {
     display: none; /* Hide initially */
@@ -144,14 +116,14 @@ img {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: #0a2744;
     padding: 20px 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
   }
 
   nav ul.active {
-    display: flex;
+    display: flex; /* Show menu when active */
   }
 
   .menu-toggle {
@@ -162,7 +134,6 @@ img {
     margin: 10px 20px;
   }
 
-  /* Dropdown content expands in place */
   .dropdown-content {
     position: relative;
     top: unset;
@@ -176,217 +147,5 @@ img {
   .dropdown.open .dropdown-content {
     display: flex;
     flex-direction: column;
-  }
-}
-
-/* Basic reset for ul inside nav */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex; /* Horizontal main menu */
-  gap: 20px;
-  align-items: center;
-}
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-}
-
-/* Dropdown button styling */
-.dropdown-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 8px 12px;
-  color: #333;
-  font-weight: 600;
-}
-
-/* Dropdown content container (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%; /* right below the button */
-  left: 0;
-  background-color: white;
-  min-width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  z-index: 1000;
-  flex-direction: column;
-}
-
-/* Dropdown links */
-.dropdown-content a {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #333;
-  display: block;
-  border-bottom: 1px solid #eee;
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-}
-
-.dropdown-content a:last-child {
-  border-bottom: none;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0f0f0;
-}
-
-/* Show dropdown on button hover or focus */
-/* If you want on click, you'd need JS, but hover example here: */
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  display: flex;
-}
-
-/* Optional: change dropdown button color on hover */
-.dropdown-btn:hover,
-.dropdown-btn:focus {
-  color: #ff6b00;
-  outline: none;
-}
-
-/* Basic reset for ul inside nav */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex; /* Horizontal main menu */
-  gap: 20px;
-  align-items: center;
-}
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-}
-
-/* Dropdown button styling */
-.dropdown-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 8px 12px;
-  color: #333;
-  font-weight: 600;
-}
-
-/* Dropdown content container (hidden by default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%; /* right below the button */
-  left: 0;
-  background-color: white;
-  min-width: 200px;
-  max-height: 250px; /* max height to limit dropdown size */
-  overflow-y: auto; /* enable vertical scroll */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  z-index: 1000;
-  flex-direction: column;
-  scrollbar-width: thin; /* for Firefox */
-}
-/* Dropdown links */
-.dropdown-content a {
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #333;
-  display: block;
-  border-bottom: 1px solid #eee;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:last-child {
-  border-bottom: none;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0f0f0;
-}
-
-/* Show dropdown on button hover or focus */
-/* If you want on click, you'd need JS, but hover example here: */
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  display: flex;
-}
-
-/* Optional: change dropdown button color on hover */
-.dropdown-btn:hover,
-.dropdown-btn:focus {
-  color: #ff6b00;
-  outline: none;
-}
-/* Hamburger icon hidden by default */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-}
-.menu-toggle span {
-  display: block;
-  height: 3px;
-  background-color: #0056b3;
-  border-radius: 3px;
-}
-/* NAV MENU (MOBILE) */
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* Hide initially */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    padding: 20px 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: flex; /* Show on mobile */
-  }
-
-  nav ul li {
-    margin: 10px 20px;
-  }
-
-  /* Dropdown content expands in place */
-  .dropdown-content {
-    position: relative;
-    top: unset;
-    left: unset;
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    display: none;
-  }
-
-  .dropdown.open .dropdown-content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Logo CSS starts from here */
-  .logo img {
-    width: 150px;
-    height: auto;
-    display: block;
   }
 }
