@@ -90,33 +90,6 @@ nav ul li a:hover {
   background-color: #e05e00;
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #0056b3, #00377a 100%);
-  color: white;
-  padding: 3em;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-content {
-  max-width: 600px;
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  margin-left: 1em;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
 /* Services Section */
 .services {
   padding: 80px 0;
@@ -306,12 +279,6 @@ footer {
   border-radius: 3px;
 }
 
-@media (max-width: 992px) {
-  .hero h1 {
-    font-size: 40px;
-  }
-}
-
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -336,19 +303,6 @@ footer {
   nav ul li {
     margin: 10px 20px;
   }
-
-  .hero {
-    padding: 60px 0;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
   .section-header h2 {
     font-size: 28px;
   }
@@ -1034,45 +988,6 @@ nav ul {
   background-color: #0056b3;
   border-radius: 3px;
 }
-.hero {
-  padding: 100px 0 80px;
-}
-
-/* ✅ Responsive: Stack content and show image below on mobile */
-@media (max-width: 768px) {
-  .hero {
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  .hero .container {
-    flex-direction: column;
-  }
-
-  .hero-content {
-    order: 1; /* content first */
-    flex: 1 1 100%;
-  }
-
-  .hero-image {
-    order: 2; /* image second */
-    flex: 1 1 100%;
-    margin-top: 20px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .hero-image img {
-    width: 90%;
-    max-width: 400px;
-  }
-}
 
 /* NAV MENU (MOBILE) */
 @media (max-width: 768px) {
@@ -1152,5 +1067,33 @@ nav ul {
   .sidenav a {
     padding: 0 10px;
     font-size: 14px;
+  }
+}
+.container-fluid {
+  width: 100%; /* Full width */
+  padding: 0 15px; /* Add some horizontal padding */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text */
+  background: linear-gradient(
+    135deg,
+    #0056b3,
+    #00377a 100%
+  ); /* Background gradient */
+  color: white; /* Text color */
+  min-height: 60vh;
+}
+
+.container-fluid h1 {
+  font-size: 4vw; /* Responsive font size */
+  margin: 0; /* Remove default margin */
+  line-height: 1.2; /* Line height for better readability */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container-fluid h1 {
+    font-size: 32px; /* Fixed size for smaller screens */
   }
 }
