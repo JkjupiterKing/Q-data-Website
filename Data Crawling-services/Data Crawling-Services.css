@@ -805,3 +805,31 @@ code {
     font-size: 14px;
   }
 }
+.container-fluid {
+  width: 100%; /* Full width */
+  padding: 0 15px; /* Add some horizontal padding */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Center text */
+  background: linear-gradient(
+    135deg,
+    #0056b3,
+    #00377a 100%
+  ); /* Background gradient */
+  color: white; /* Text color */
+  min-height: 60vh;
+}
+
+.container-fluid h1 {
+  font-size: 4vw; /* Responsive font size */
+  margin: 0; /* Remove default margin */
+  line-height: 1.2; /* Line height for better readability */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container-fluid h1 {
+    font-size: 32px;
+  }
+}
